@@ -284,9 +284,16 @@ class UserProfileFragment : Fragment() {
 
     private fun setupEditUserDataDialogFields() {
         if (userInfo != null) {
-            Glide.with(this).load(userInfo!!.userProfilePhotoUrl).diskCacheStrategy(
-                DiskCacheStrategy.RESOURCE
-            ).into(editUserDataUserPhoto)
+            if(!userInfo!!.userProfilePhotoUrl.isNullOrEmpty()) {
+                Glide.with(this).load(userInfo!!.userProfilePhotoUrl).diskCacheStrategy(
+                    DiskCacheStrategy.RESOURCE
+                ).into(editUserDataUserPhoto)
+            } else {
+                editUserDataUserPhoto.setImageDrawable(ContextCompat.getDrawable(
+                    requireContext(),
+                    R.drawable.ic_account_circle_black
+                ))
+            }
 
             editUserDataUserFirstName.editText?.setText(userInfo!!.firstName)
             editUserDataUserLastName.editText?.setText(userInfo!!.lastName)

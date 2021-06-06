@@ -879,44 +879,78 @@ class FirebaseRepository : ViewModel() {
         if (auth.currentUser != null) {
             if (selectedBitmap != null) {
                 val storage = FirebaseStorage.getInstance()
-                storage.getReference(userInfo.userProfilePhotoPath!!).delete()
-                    .addOnSuccessListener {
-                        val filename = UUID.randomUUID().toString()
-                        val newPhotoRef =
-                            storage.getReference("Images/${auth.currentUser!!.uid}/profilePhoto/$filename")
+                if(!userInfo.userProfilePhotoPath.isNullOrEmpty()) {
+                    storage.getReference(userInfo.userProfilePhotoPath!!).delete()
+                        .addOnSuccessListener {
+                            val filename = UUID.randomUUID().toString()
+                            val newPhotoRef =
+                                storage.getReference("Images/${auth.currentUser!!.uid}/profilePhoto/$filename")
 
-                        val baos = ByteArrayOutputStream()
-                        selectedBitmap.compress(Bitmap.CompressFormat.JPEG, 100, baos)
-                        val data: ByteArray = baos.toByteArray()
+                            val baos = ByteArrayOutputStream()
+                            selectedBitmap.compress(Bitmap.CompressFormat.JPEG, 100, baos)
+                            val data: ByteArray = baos.toByteArray()
 
-                        newPhotoRef.putBytes(data)
-                            .addOnSuccessListener {
-                                newPhotoRef.downloadUrl.addOnSuccessListener { uri ->
-                                    update["userProfilePhotoUrl"] = uri.toString()
-                                    update["userProfilePhotoPath"] =
-                                        "Images/${auth.currentUser!!.uid}/profilePhoto/$filename"
+                            newPhotoRef.putBytes(data)
+                                .addOnSuccessListener {
+                                    newPhotoRef.downloadUrl.addOnSuccessListener { uri ->
+                                        update["userProfilePhotoUrl"] = uri.toString()
+                                        update["userProfilePhotoPath"] =
+                                            "Images/${auth.currentUser!!.uid}/profilePhoto/$filename"
 
-                                    FirebaseFirestore.getInstance().collection("users")
-                                        .document(auth.currentUser!!.uid).update(update)
-                                        .addOnSuccessListener {
-                                            taskStatusListener.postValue(true)
-                                        }
-                                        .addOnFailureListener { error ->
-                                            taskStatusListener.postValue(false)
-                                            errorMessage.postValue(error)
-                                            return@addOnFailureListener
-                                        }
+                                        FirebaseFirestore.getInstance().collection("users")
+                                            .document(auth.currentUser!!.uid).update(update)
+                                            .addOnSuccessListener {
+                                                taskStatusListener.postValue(true)
+                                            }
+                                            .addOnFailureListener { error ->
+                                                taskStatusListener.postValue(false)
+                                                errorMessage.postValue(error)
+                                                return@addOnFailureListener
+                                            }
+                                    }
+                                }.addOnFailureListener { error ->
+                                    taskStatusListener.postValue(false)
+                                    errorMessage.postValue(error)
+                                    return@addOnFailureListener
                                 }
-                            }.addOnFailureListener { error ->
-                                taskStatusListener.postValue(false)
-                                errorMessage.postValue(error)
-                                return@addOnFailureListener
+                        }.addOnFailureListener { error ->
+                            taskStatusListener.postValue(false)
+                            errorMessage.postValue(error)
+                            return@addOnFailureListener
+                        }
+                } else {
+                    val filename = UUID.randomUUID().toString()
+                    val newPhotoRef =
+                        storage.getReference("Images/${auth.currentUser!!.uid}/profilePhoto/$filename")
+
+                    val baos = ByteArrayOutputStream()
+                    selectedBitmap.compress(Bitmap.CompressFormat.JPEG, 100, baos)
+                    val data: ByteArray = baos.toByteArray()
+
+                    newPhotoRef.putBytes(data)
+                        .addOnSuccessListener {
+                            newPhotoRef.downloadUrl.addOnSuccessListener { uri ->
+                                update["userProfilePhotoUrl"] = uri.toString()
+                                update["userProfilePhotoPath"] =
+                                    "Images/${auth.currentUser!!.uid}/profilePhoto/$filename"
+
+                                FirebaseFirestore.getInstance().collection("users")
+                                    .document(auth.currentUser!!.uid).update(update)
+                                    .addOnSuccessListener {
+                                        taskStatusListener.postValue(true)
+                                    }
+                                    .addOnFailureListener { error ->
+                                        taskStatusListener.postValue(false)
+                                        errorMessage.postValue(error)
+                                        return@addOnFailureListener
+                                    }
                             }
-                    }.addOnFailureListener { error ->
-                        taskStatusListener.postValue(false)
-                        errorMessage.postValue(error)
-                        return@addOnFailureListener
-                    }
+                        }.addOnFailureListener { error ->
+                            taskStatusListener.postValue(false)
+                            errorMessage.postValue(error)
+                            return@addOnFailureListener
+                        }
+                }
             } else {
                 FirebaseFirestore.getInstance().collection("users").document(auth.currentUser!!.uid)
                     .update(update).addOnSuccessListener {
