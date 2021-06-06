@@ -1,0 +1,202 @@
+<resources>
+    <string name="app_name">Quadclub</string>
+    <string name="sign_in">Logowanie</string>
+    <string name="app_name_title">QuadClub</string>
+    <string name="email">adres e-mail</string>
+    <string name="password">hasło</string>
+    <string name="log_in">Zaloguj</string>
+    <string name="launcher_screen_text">Wejdź do świata motoryzacyjnej rodziny. Dodawaj swoje pojazdy i kontroluj ich stan techniczny dzięki jednej aplikacji.</string>
+    <string name="you_dont_have_an_account">Nie masz jeszcze konta?</string>
+    <string name="register">Zarejestruj się.</string>
+    <string name="application_text_logo_description">Tekstowe logo aplikacji</string>
+    <string name="forgot_password">Zapomniałeś hasła?</string>
+    <string name="forgot_password_short_text">Podaj adres e-mail. Wyślemy ci link do zresetowania hasła.</string>
+    <string name="password_resetting">Resetowanie hasła</string>
+    <string name="reset_password">Zresetuj hasło</string>
+    <string name="first_name">imię</string>
+    <string name="last_name">nazwisko</string>
+    <string name="phone_number">numer telefonu</string>
+    <string name="address">adres</string>
+    <string name="postal_code">kod pocztowy</string>
+    <string name="city">miasto</string>
+    <string name="password_repeat">powtórz hasło</string>
+    <string name="register_as_service">Zarejestruj się jako serwis</string>
+    <string name="company_name">nazwa firmy</string>
+    <string name="company_identification_number">numer NIP</string>
+    <string name="company_address">adres firmy</string>
+    <string name="company_address_checkbox_text">adres firmy taki sam jak adres prywatny</string>
+    <string name="company_phone">telefon firmowy</string>
+    <string name="company_phone_checkbox_text">telefon firmowy taki sam jak prywatny</string>
+    <string name="create_account">Utwórz konto</string>
+    <string name="profile_photo_description">Zdjęcie profilowe urzytkownika</string>
+    <string name="registration_back_button_description">Strzałka do cofnięcia ekranu</string>
+    <string name="dialog_creating_account_text">Tworzenie konta …</string>
+    <string name="fill_field">To pole jest wymagane.</string>
+    <string name="dialog_sending_reset_link_text">Wysyłanie maila …</string>
+    <string name="dialog_login_progress">logowanie …</string>
+    <string name="empty_vehicle_colection">Brak pojazdów w kolekcji</string>
+    <string name="str_home_service_box_header">Serwis</string>
+    <string name="home_service_box_description">Zarezerwuj wizytę w serwisie lub skontaktuj się z serwisantem aby zadać mu pytanie</string>
+    <string name="home_vehicles_box_header">Pojazdy</string>
+    <string name="home_vehicles_box_description">Wszystkie informacje o twoich pojazdach w jednym miejscu</string>
+    <string name="home_route_box_header">Trasy</string>
+    <string name="home_route_box_description">Zapisuj pokonywane przez siebie trasy, udostępniaj je znajomym i jednocześnie monitoruj przebieg swoich pojazdów</string>
+    <string name="home_route_box_arrow_button_description">Przejdź do funcji śledzenia trasy przejazdu</string>
+    <string name="home_route_box_go_button_description">Przycisk który przeniesie cię do aktywności śledzenia trasy przejazdu.</string>
+    <string name="home_route_box_go_description">Ruszaj w drogę</string>
+    <string name="home_gallery">Galeria</string>
+    <string name="home_gallery_header_button_description">Dodaj zdjęcie do galerii</string>
+    <string name="home_gallery_box_body_photo_description">Zdjęcie pochodzące z galerii użytkownika.</string>
+    <string name="home_my_vehicles">Moje pojazdy</string>
+    <string name="home_services">Usługi</string>
+    <string name="quad_card_photo_description">Zdjęcie identyfikujące pojazd użytkownika.</string>
+    <string name="vehicle_card_mileage">Przebieg:</string>
+    <string name="recycler_vehicle_card_more_info_button">Kliknij aby uzyskać więcej informacji o pojeździe.</string>
+    <string name="recycled_empty_card_text">Brak pojazdów w kolekcji</string>
+    <string name="vehicles_header">Moje pojazdy</string>
+    <string name="add_vehicle_label">Dodaj nowy pojazd</string>
+    <string name="add_vehicle_label_description">Przycisk przekierowujacy do dodawania nowego pojazdu</string>
+    <string name="add_vehicle_photo_description">TODO</string>
+    <string name="add_vehicle_button_description">TODO</string>
+    <string name="add_vehicle_name">nazwa</string>
+    <string name="add_vehicle_model">model</string>
+    <string name="add_vehicle_manufacturer">producent</string>
+    <string name="add_vehicle_engine_capacity">pojemnosc silnika</string>
+    <string name="cubic_centimeters">cm3</string>
+    <string name="add_vehicle_color">kolor</string>
+    <string name="add_vehicle_mileage">aktualny przebieg</string>
+    <string name="add_vehicle_vin">numer VIN</string>
+    <string name="add_vehicle">Dodaj pojazd</string>
+    <string name="add_vehicle_save">Zapisz</string>
+    <string name="dialog_uploading_data_text">Zapisywanie danych</string>
+    <string name="str_search_by">by</string>
+
+    <string-array name="service_list_search_type">
+        <item>name</item>
+        <item>address</item>
+        <item>postal code</item>
+        <item>city</item>
+    </string-array>
+
+    <string-array name="order_status">
+        <item>Serwis oczekuje na przyjazd pojazdu</item>
+        <item>Pojazd przyjęto w serwisie</item>
+        <item>Rozpoczęto pracę serwisową</item>
+        <item>Zakończono pracę serwisową</item>
+        <item>Pojazd gotowy do odbioru</item>
+        <item>Pojazd odebrany przez klienta</item>
+        <item>Serwis zakończony</item>
+        <item>Napotkano problemy w trakcie serwisu, skontaktuj się z nami.</item>
+    </string-array>
+
+    <string name="order_status_customer_accepted_date_and_time">Klient zaakceptował zaproponowaną datę.</string>
+
+    <string name="str_service_handling_the_request">Serwis obsługujący zgłoszenie</string>
+    <string name="select_date">wybierz datę</string>
+    <string name="select_time">wybierz godzinę</string>
+    <string name="appointment_alert">Uwaga!</string>
+    <string name="appointment_info">Ustawiona data i godzina może zostać zmieniona po zweryfikowaniu przez serwis.</string>
+    <string name="reason_for_the_report">powód zgłoszenia:</string>
+    <string name="vehicle">pojazd:</string>
+    <string name="additional_information">dodatkowe informacje:</string>
+    <string name="accept_terms_and_contitions">akceptuje warunki i regulamin</string>
+    <string name="send_the_application">Wyslij zgłoszenie</string>
+    <string name="enter_proper_data_msg">Wprowadź prawidłowe dane</string>
+    <string name="str_home_nav">Home</string>
+    <string name="str_notifications_nav">Powiadomienia</string>
+    <string name="str_messages_nav">Wiadomosci</string>
+    <string name="service_order_number_text">Zamówienie serwisowe nr:</string>
+    <string name="service_date_text">Data serwisu:</string>
+    <string name="service_time_text">Godzina serwisu:</string>
+    <string name="service_vehicle_text">Pojazd:</string>
+    <string name="service_status_text">Status:</string>
+    <string name="more_info_button_description">More info button</string>
+    <string name="str_vehicle_photo_description" />
+    <string name="str_route_info_name">Nazwa trasy:</string>
+    <string name="str_route_info_date_header">Data:</string>
+    <string name="str_route_info_distance_header">Dystans:</string>
+    <string name="str_route_info_time_header">Czas trwania:</string>
+    <string name="str_app_bar_menu_delete_route_button">Usuń trasę</string>
+    <string name="str_notification_status_change">Zmiana statusu zamówienia nr: <b>%s</b> na: <b>%s</b></string>
+
+    <string name="network_alert_title">Brak połączenia z bazą danych</string>
+    <string name="network_alert_message">Połącz się z siecią aby móc w pełni korzystać z aplikacji.</string>
+    <string name="str_mandatory_field">pole obowiązkowe</string>
+    <string name="str_enter_proper_engine_capacity">podaj prawidłową pojemność sinika</string>
+    <string name="str_enter_proper_mileage">podaj prawidłowy przebieg</string>
+    <string name="str_enter_proper_vin_number">podaj prawidłowy numer VIN</string>
+    <string name="error_alert_title">Error!</string>
+    <string name="caution_alert_title">Uwaga!</string>
+    <string name="caution_alert_delete_vehicle">Czy na pewno chcesz usunąć ten pojazd?</string>
+    <string name="str_update_data">Zaktualizuj dane</string>
+    <string name="str_no_data">Brak</string>
+    <string name="str_acceptance_of_the_regulations_required">Musisz zaakceptować regulamin.</string>
+    <string name="str_the_order_is_awaiting_approval">Zamówienie oczekuje na akceptację.</string>
+    <string name="str_hour_plus_time_template">godz. %s</string>
+    <string name="empty_vehicle_colection_appoitment">Brak pojazdów w kolekcji. Jeżeli chcesz skorzystać z tej funkcji dodaj swój pojazd do kolekcji.</string>
+    <string name="str_welcome_message_service_conversation_template">Witaj, %s! Postaramy się odpowiedzieć w jak najkrótszym czasie. Serwis %s, tel: %s</string>
+    <string name="str_new_message_notification_template">Nowa wiadomość od: %s %s</string>
+    <string name="str_provide_correct_data">Podaj prawidłowe dane!</string>
+    <string name="str_go_road">Ruszaj!</string>
+    <string name="str_route_tracking">Śledzenie trasy</string>
+    <string name="str_do_you_want_save_route">Czy na pewno nie chcesz zapisać tej trasy?</string>
+    <string name="str_route_name_exist">Trasa o takiej nazwie już istnieje.</string>
+    <string name="str_choose_other_name">Podaj inną nazwę.</string>
+    <string name="str_tracking_need_access_to_localization">Ta aktywność nie jest dostępna jeżeli nie pozwolisz aplikacji na dostęp do twojej lokalizacji.</string>
+    <string name="str_grant_access">Przyznaj dostęp</string>
+    <string name="caution_alert_delete_route">Czy na pewno chcesz usunąć tę trasę?</string>
+    <string name="str_close_dialog_button_description">Przycisk do zamknięcia okna dialogowego</string>
+    <string name="err_add_vehicle_photo">Dodaj zdjecie</string>
+    <string name="back_button_description">Przycisk pozwalający na powrócenie do poprzedniego ekranu</string>
+    <string name="str_details">Szczegóły</string>
+    <string name="str_order_vin">VIN:</string>
+    <string name="str_purchaser">Zamawiający:</string>
+    <string name="str_shortcut_phone">tel:</string>
+    <string name="str_report_reason">Powód zgłoszenia:</string>
+    <string name="str_additional_information">Dodatkowe informacje:</string>
+    <string name="str_change_order_status">Zmień status zamówienia:</string>
+    <string name="str_update">Aktualizuj</string>
+    <string name="str_add_note">Dodaj notatkę:</string>
+    <string name="str_additional_informations_for_customer">Dodatkowe informacje dla klienta</string>
+    <string name="str_save_note">Zapisz notatkę</string>
+    <string name="str_history_of_order_status">Historia statusu zamówienia:</string>
+    <string name="str_arrow_down_spinner_decription">Przysisk powodujący rozwinięcie listy</string>
+    <string name="str_order_waiting_for_acceptance">Zamówienia oczekujące na akceptację</string>
+    <string name="str_company_arrow_forward_description">Przycisk przekierowujący do ekranu z konkretnym rodzajem zamówień</string>
+    <string name="str_orders_in_progress">Zamówienia w trakcie realizacji</string>
+    <string name="str_orders_done">Zamówienia zakończone</string>
+    <string name="str_information_about_company">Informacje o firmie:</string>
+    <string name="str_caps_lock_nip">NIP:</string>
+    <string name="str_phone">telefon:</string>
+    <string name="str_logout">Wyloguj</string>
+    <string name="str_conversation_delete_button_description">Przycisk powodujący usunięcie konwersacji</string>
+    <string name="str_conversation_add_photo_button_description">Przycisk pozwalający na załączenie zdjęcia do wiadomości</string>
+    <string name="str_conversation_send_button_description">Przycisk do wysłania wiadomości</string>
+    <string name="str_hint_enter_message">wiadomość</string>
+    <string name="str_conversation_message_photo_description">message_photo</string>
+    <string name="str_conversation_delete_added_photo_button_description">usuś dodane zdjęcie</string>
+    <string name="str_company_orders_view_title">Zamówienia</string>
+    <string name="str_company_notifications_view_title">Powiadomienia</string>
+    <string name="str_no_notifications">Brak powiadomień</string>
+    <string name="str_messages_view_title">Wiadomości</string>
+    <string name="str_so_messages">Brak wiadomości</string>
+    <string name="str_conversation_with_company_title">KONWERSACJE Z SERWISAMI</string>
+    <string name="str_conversation_with_users">KONWERSACJE Z UŻYTKOWNIKAMI</string>
+    <string name="str_start_new_conversation_button_description">Rozpocznij nową konwersację</string>
+    <string name="str_no_messages">Brak wiadomości</string>
+    <string name="empty_image_view_appoitment">Jeżeli chcesz przejść dalej musisz dodać zdjęcie.</string>
+    <string name="str_cancel">ANULUJ</string>
+    <string name="str_share">UDOSTĘPNIJ</string>
+    <string name="str_add_post_photo_view_description">Zdjęcie dodane do postu.</string>
+    <string name="str_add_post_add_photo_button_description">Kliknij aby dodać zdjęcie.</string>
+    <string name="str_vehicle_pin_to_post_title">Oznacz swój pojazd na zdjęciu</string>
+    <string name="str_add_vehicle_pin_to_post_arrow_button_describtion">Kliknij aby oznaczyć pojazd.</string>
+    <string name="str_delete_tagged_vehicle_button_description">Kliknij aby usunąć oznaczony pojazd.</string>
+    <string name="str_add_post_add_tags_title">Dodaj opis/tagi:</string>
+    <string name="str_hint_tags">opis/tagi</string>
+    <string name="localization_permission_not_granted">Jeżeli chcesz skożystac z tej funkcji musisz przyznac aplikacji dostęp do twojej lokalizacji.</string>
+    <string name="no_verified_company">Twoja firma nie została jeszcze przez nas zweryfikowana. W razie pytań skontaktuj się z nami.</string>
+    <string name="str_wrong_address_email">Podaj poprawny adres email.</string>
+    <string name="str_passwords_must_be_identical">hasła muszą być identyczne</string>
+    <string name="str_password_must_have_eight_digits">hasło musi mieć minimum 8 znaków</string>
+</resources>

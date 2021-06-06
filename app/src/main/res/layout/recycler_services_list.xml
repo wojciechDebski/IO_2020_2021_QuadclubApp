@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/recycler_services_list_background">
+
+    <TextView
+        android:id="@+id/service_list_company_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Road Power" />
+
+    <TextView
+        android:id="@+id/service_list_company_adress"
+        style="@style/poppins_12sp_black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/service_list_company_name"
+        app:layout_constraintTop_toBottomOf="@+id/service_list_company_name"
+        tools:text="Strzelcew 20c" />
+
+    <TextView
+        android:id="@+id/service_list_company_postal_code"
+        style="@style/poppins_12sp_black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/service_list_company_adress"
+        app:layout_constraintTop_toBottomOf="@+id/service_list_company_adress"
+        tools:text="99-400" />
+
+    <TextView
+        android:id="@+id/service_list_company_city"
+        style="@style/poppins_12sp_black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/service_list_company_postal_code"
+        app:layout_constraintStart_toEndOf="@+id/service_list_company_postal_code"
+        tools:text="Lowicz" />
+
+    <TextView
+        android:id="@+id/phone_short"
+        style="@style/poppins_12sp_black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/service_list_company_postal_code"
+        app:layout_constraintTop_toBottomOf="@+id/service_list_company_postal_code"
+        android:text="tel:" />
+
+    <TextView
+        android:id="@+id/service_list_company_phone"
+        style="@style/poppins_12sp_black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/phone_short"
+        app:layout_constraintStart_toEndOf="@+id/phone_short"
+        tools:text="123432345" />
+
+    <ImageButton
+        android:id="@+id/choose_service_button"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="32dp"
+        android:background="@null"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_arrow_right_in_black_circle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

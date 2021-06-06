@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragments.userUi.ServiceFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <LinearLayout
+            android:id="@+id/linearLayout7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="32dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                android:gravity="center">
+
+                <ImageButton
+                    android:id="@+id/service_order_close_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_close"
+                    app:tint="@color/black"
+                    android:background="@color/off_white"/>
+
+                <TextView
+                    style="@style/poppins_bold_20sp_black"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:text="Zgłoszenie serwisowe"
+                    android:textAlignment="center" />
+            </LinearLayout>
+
+
+            <TextView
+                style="@style/text_view_style"
+                android:text="@string/str_service_handling_the_request" />
+
+            <EditText
+                android:id="@+id/appointment_service_name"
+                style="@style/edit_text_style"
+                android:enabled="false"
+                tools:text="Road Power" />
+
+            <TextView
+                style="@style/text_view_style"
+                android:text="@string/address" />
+
+            <EditText
+                android:id="@+id/appointment_service_full_address"
+                style="@style/edit_text_style"
+                android:enabled="false"
+                tools:text="Strzelcew 20c, 99-400 Lowicz" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/text_view_style"
+                        android:text="@string/select_date" />
+
+                    <EditText
+                        android:id="@+id/appointment_select_date"
+                        style="@style/edit_text_style"
+                        android:drawableEnd="@drawable/ic_calendar"
+                        android:focusableInTouchMode="false"
+                        tools:text="2021-05-25" />
+
+                    <TextView
+                        style="@style/text_view_style"
+                        android:text="@string/select_time" />
+
+                    <EditText
+                        android:id="@+id/appointment_select_time"
+                        style="@style/edit_text_style"
+                        android:drawableEnd="@drawable/ic_time"
+                        android:focusableInTouchMode="false"
+                        tools:text="14:25" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:padding="15dp">
+
+                    <TextView
+                        style="@style/text_view_style_bold"
+                        android:text="@string/appointment_alert" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/poppins"
+                        android:paddingStart="5dp"
+                        android:paddingEnd="5dp"
+                        android:text="@string/appointment_info"
+                        android:textColor="@color/black"
+                        android:textSize="10sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                style="@style/text_view_style"
+                android:text="@string/reason_for_the_report" />
+
+            <EditText
+                android:id="@+id/appointment_report_reason"
+                style="@style/edit_text_style"
+                tools:text="Wymiana oleju" />
+
+            <TextView
+                style="@style/text_view_style"
+                android:text="@string/vehicle" />
+
+            <Spinner
+                android:id="@+id/appointment_vehicle_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="5dp"
+                android:verticalScrollbarPosition="right"/>
+
+            <TextView
+                style="@style/text_view_style"
+                android:layout_marginTop="16dp"
+                android:text="@string/additional_information" />
+
+            <EditText
+                android:id="@+id/appointment_additional_info"
+                style="@style/edit_text_style"
+                android:hint="opcjonalnie"
+                tools:text="dodatkowe info" />
+
+            <CheckBox
+                android:id="@+id/appointment_terms_and_conditions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/montserrat"
+                android:text="@string/accept_terms_and_contitions"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:theme="@style/EditTextTheme" />
+
+            <Button
+                android:id="@+id/appointment_send_the_application"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="32dp"
+                android:layout_marginBottom="32dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="@string/send_the_application"
+                android:textAllCaps="false"
+                android:theme="@style/DarkGreenRoundedButton" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

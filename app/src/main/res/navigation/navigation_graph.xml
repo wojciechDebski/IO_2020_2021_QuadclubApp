@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.qcteam.quadclub.ui.fragments.LoginFragment"
+        android:label="fragment_login_register"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_userHomeFragment"
+            app:destination="@id/userHomeFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_companyHomeFragment"
+            app:destination="@id/companyHomeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.qcteam.quadclub.ui.fragments.RegisterFragment"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register">
+        <action
+            android:id="@+id/action_registerFragment_to_companyHomeFragment"
+            app:destination="@id/companyHomeFragment" />
+        <action
+            android:id="@+id/action_registerFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_registerFragment_to_userHomeFragment"
+            app:destination="@id/userHomeFragment" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/companyHomeFragment"
+        android:name="com.qcteam.quadclub.ui.fragments.companyUi.CompanyHomeFragment"
+        android:label="fragment_company_home"
+        tools:layout="@layout/fragment_company_home">
+        <action
+            android:id="@+id/action_companyHomeFragment_to_companyOrdersFragment"
+            app:destination="@id/companyOrdersFragment" />
+        <action
+            android:id="@+id/action_companyHomeFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/companyOrderDetailsFragment"
+        android:name="com.qcteam.quadclub.ui.fragments.companyUi.CompanyOrderDetailsFragment"
+        android:label="fragment_company_order_details"
+        tools:layout="@layout/fragment_company_order_details" >
+        <action
+            android:id="@+id/action_companyOrderDetailsFragment_to_companyOrdersFragment"
+            app:destination="@id/companyOrdersFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/companyOrdersFragment"
+        android:name="com.qcteam.quadclub.ui.fragments.companyUi.CompanyOrdersFragment"
+        android:label="fragment_company_orders"
+        tools:layout="@layout/fragment_company_orders">
+        <action
+            android:id="@+id/action_companyOrdersFragment_to_companyOrderDetailsFragment"
+            app:destination="@id/companyOrderDetailsFragment" />
+        <action
+            android:id="@+id/action_companyOrdersFragment_to_companyHomeFragment"
+            app:destination="@id/companyHomeFragment" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/userHomeFragment"
+        android:name="com.qcteam.quadclub.ui.fragments.userUi.UserHomeFragment"
+        android:label="fragment_user_home"
+        tools:layout="@layout/fragment_user_home">
+        <action
+            android:id="@+id/action_userHomeFragment_to_searchServiceFragment"
+            app:destination="@id/searchServiceFragment" />
+        <action
+            android:id="@+id/action_userHomeFragment_to_userProfileFragment"
+            app:destination="@id/userProfileFragment" />
+        <action
+            android:id="@+id/action_userHomeFragment_to_vehiclesFragment"
+            app:destination="@id/vehiclesFragment" />
+        <action
+            android:id="@+id/action_userHomeFragment_to_galleryFragment"
+            app:destination="@id/galleryFragment" />
+        <action
+            android:id="@+id/action_userHomeFragment_to_routesFragment"
+            app:destination="@id/routesFragment" />
+        <action
+            android:id="@+id/action_userHomeFragment_to_trackingFragment"
+            app:destination="@id/trackingFragment" />
+        <action
+            android:id="@+id/action_userHomeFragment_to_userConversationsListFragment"
+            app:destination="@id/userConversationsListFragment" />
+        <action
+            android:id="@+id/action_userHomeFragment_to_vehicleMoreInfoFragment"
+            app:destination="@id/vehicleMoreInfoFragment" />
+        <action
+            android:id="@+id/action_userHomeFragment_to_addPhotoPostFragment"
+            app:destination="@id/addPhotoPostFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchServiceFragment"
+        android:name="com.qcteam.quadclub.ui.fragments.userUi.SearchServiceFragment"
+        android:label="SearchServiceFragment" >
+        <action
+            android:id="@+id/action_searchServiceFragment_to_serviceFragment"
+            app:destination="@id/serviceFragment" />
+        <action
+            android:id="@+id/action_searchServiceFragment_to_conversationDetailsFragment"
+            app:destination="@id/conversationDetailsFragment" />
+        <action
+            android:id="@+id/action_searchServiceFragment_to_userHomeFragment"
+            app:destination="@id/userHomeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/serviceFragment"
+        android:name="com.qcteam.quadclub.ui.fragments.userUi.ServiceFragment"
+        android:label="fragment_service"
+        tools:layout="@layout/fragment_service" >
+        <action
+            android:id="@+id/action_serviceFragment_to_serviceOrderListFragment"
+            app:destination="@id/serviceOrderListFragment"
+            app:popUpTo="@id/userProfileFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_serviceFragment_to_userHomeFragment"
+            app:destination="@id/userHomeFragment"
+            app:popUpTo="@id/userHomeFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/userProfileFragment"
+        android:name="com.qcteam.quadclub.ui.fragments.userUi.UserProfileFragment"
+        android:label="UserProfileFragment" >
+        <action
+            android:id="@+id/action_userProfileFragment_to_serviceOrderListFragment"
+            app:destination="@id/serviceOrderListFragment" />
+        <action
+            android:id="@+id/action_userProfileFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_userProfileFragment_to_userHomeFragment"
+            app:destination="@id/userHomeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/serviceOrderListFragment"
+        android:name="com.qcteam.quadclub.ui.fragments.userUi.ServiceOrderListFragment"
+        android:label="fragment_service_order_list"
+        tools:layout="@layout/fragment_service_order_list" >
+        <action
+            android:id="@+id/action_serviceOrderListFragment_to_serviceOrderMoreInfoFragment"
+            app:destination="@id/serviceOrderMoreInfoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/serviceOrderMoreInfoFragment"
+        android:name="com.qcteam.quadclub.ui.fragments.userUi.ServiceOrderMoreInfoFragment"
+        android:label="fragment_service_order_more_info"
+        tools:layout="@layout/fragment_service_order_more_info" />
+    <fragment
+        android:id="@+id/vehiclesFragment"
+        android:name="com.qcteam.quadclub.ui.fragments.userUi.VehiclesFragment"
+        android:label="fragment_vehicles"
+        tools:layout="@layout/fragment_vehicles" >
+        <action
+            android:id="@+id/action_vehiclesFragment_to_vehicleMoreInfoFragment"
+            app:destination="@id/vehicleMoreInfoFragment" />
+        <action
+            android:id="@+id/action_vehiclesFragment_to_userHomeFragment"
+            app:destination="@id/userHomeFragment"
+            app:popUpTo="@id/companyHomeFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/vehicleMoreInfoFragment"
+        android:name="com.qcteam.quadclub.ui.fragments.userUi.VehicleMoreInfoFragment"
+        android:label="VehicleMoreInfoFragment" >
+        <action
+            android:id="@+id/action_vehicleMoreInfoFragment_to_serviceOrderMoreInfoFragment"
+            app:destination="@id/serviceOrderMoreInfoFragment" />
+        <action
+            android:id="@+id/action_vehicleMoreInfoFragment_to_vehiclesFragment"
+            app:destination="@id/vehiclesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/galleryFragment"
+        android:name="com.qcteam.quadclub.ui.fragments.userUi.GalleryFragment"
+        android:label="fragment_gallery"
+        tools:layout="@layout/fragment_gallery" >
+        <action
+            android:id="@+id/action_galleryFragment_to_addPhotoPostFragment"
+            app:destination="@id/addPhotoPostFragment" />
+        <action
+            android:id="@+id/action_galleryFragment_to_userHomeFragment"
+            app:destination="@id/userHomeFragment"
+            app:popUpTo="@id/userHomeFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/addPhotoPostFragment"
+        android:name="com.qcteam.quadclub.ui.fragments.userUi.AddPhotoPostFragment"
+        android:label="fragment_add_photo_post"
+        tools:layout="@layout/fragment_add_photo_post" >
+        <action
+            android:id="@+id/action_addPhotoPostFragment_to_galleryFragment"
+            app:destination="@id/galleryFragment"
+            app:popUpTo="@id/userHomeFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_addPhotoPostFragment_to_vehiclesFragment"
+            app:destination="@id/vehiclesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/routesFragment"
+        android:name="com.qcteam.quadclub.ui.fragments.userUi.RoutesFragment"
+        android:label="fragment_routes"
+        tools:layout="@layout/fragment_routes" >
+        <action
+            android:id="@+id/action_routesFragment_to_routeMoreInfoFragment"
+            app:destination="@id/routeMoreInfoFragment" />
+        <action
+            android:id="@+id/action_routesFragment_to_userHomeFragment"
+            app:destination="@id/userHomeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/trackingFragment"
+        android:name="com.qcteam.quadclub.ui.fragments.userUi.TrackingFragment"
+        android:label="fragment_tracking"
+        tools:layout="@layout/fragment_tracking" >
+        <action
+            android:id="@+id/action_trackingFragment_to_routesFragment"
+            app:destination="@id/routesFragment" />
+        <action
+            android:id="@+id/action_trackingFragment_to_userHomeFragment"
+            app:destination="@id/userHomeFragment"
+            app:popUpTo="@id/userHomeFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/routeMoreInfoFragment"
+        android:name="com.qcteam.quadclub.ui.fragments.userUi.RouteMoreInfoFragment"
+        android:label="fragment_route_more_info"
+        tools:layout="@layout/fragment_route_more_info" >
+        <action
+            android:id="@+id/action_routeMoreInfoFragment_to_routesFragment"
+            app:destination="@id/routesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/userConversationsListFragment"
+        android:name="com.qcteam.quadclub.ui.fragments.userUi.ConversationsListFragment"
+        android:label="fragment_conversations_list"
+        tools:layout="@layout/fragment_conversations_list" >
+        <action
+            android:id="@+id/action_conversationsListFragment_to_conversationDetailsFragment"
+            app:destination="@id/conversationDetailsFragment" />
+        <action
+            android:id="@+id/action_userConversationsListFragment_to_userHomeFragment"
+            app:destination="@id/userHomeFragment"
+            app:popUpTo="@id/userHomeFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/conversationDetailsFragment"
+        android:name="com.qcteam.quadclub.ui.fragments.userUi.ConversationDetailsFragment"
+        android:label="fragment_conversation_details"
+        tools:layout="@layout/fragment_conversation_details" >
+        <action
+            android:id="@+id/action_conversationDetailsFragment_to_userConversationsListFragment"
+            app:destination="@id/userConversationsListFragment"
+            app:popUpTo="@id/userConversationsListFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/userNotificationsFragment"
+        android:name="com.qcteam.quadclub.ui.fragments.userUi.NotificationsFragment"
+        android:label="fragment_notifications"
+        tools:layout="@layout/fragment_notifications" >
+        <action
+            android:id="@+id/action_userNotificationsFragment_to_userHomeFragment"
+            app:destination="@id/userHomeFragment"
+            app:popUpTo="@id/userHomeFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/companyConversationsListFragment"
+        android:name="com.qcteam.quadclub.ui.fragments.companyUi.CompanyConversationsListFragment"
+        android:label="fragment_company_conversations_list"
+        tools:layout="@layout/fragment_company_conversations_list" >
+        <action
+            android:id="@+id/action_companyConversationsListFragment_to_companyConversationDetailFragment"
+            app:destination="@id/companyConversationDetailFragment" />
+        <action
+            android:id="@+id/action_companyConversationsListFragment_to_companyHomeFragment"
+            app:destination="@id/companyHomeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/companyConversationDetailFragment"
+        android:name="com.qcteam.quadclub.ui.fragments.companyUi.CompanyConversationDetailFragment"
+        android:label="fragment_company_conversation_detail"
+        tools:layout="@layout/fragment_company_conversation_detail" >
+        <action
+            android:id="@+id/action_companyConversationDetailFragment_to_companyConversationsListFragment"
+            app:destination="@id/companyConversationsListFragment"
+            app:popUpTo="@id/companyConversationsListFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/companyNotificationsFragment"
+        android:name="com.qcteam.quadclub.ui.fragments.companyUi.CompanyNotificationsFragment"
+        android:label="fragment_company_notifications"
+        tools:layout="@layout/fragment_company_notifications" >
+        <action
+            android:id="@+id/action_companyNotificationsFragment_to_companyHomeFragment"
+            app:destination="@id/companyHomeFragment" />
+    </fragment>
+</navigation>

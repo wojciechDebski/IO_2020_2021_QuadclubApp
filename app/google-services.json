@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "883812620910",
+    "project_id": "quadclub-mobileapp",
+    "storage_bucket": "quadclub-mobileapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:883812620910:android:e613110741d1ce2e44a47f",
+        "android_client_info": {
+          "package_name": "com.qcteam.quadclub"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "883812620910-fo2nrn21v2jldp09j8h3asgg8l132un3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAe4B6wjXZrpTzHxr1Lh3bYlp4Rxwoq0Qg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "883812620910-fo2nrn21v2jldp09j8h3asgg8l132un3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

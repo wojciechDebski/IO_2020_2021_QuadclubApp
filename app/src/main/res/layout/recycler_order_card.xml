@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/order_card"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?android:attr/selectableItemBackground"
+    app:cardCornerRadius="15dp"
+    app:cardElevation="3dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/order_constraint_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="8dp"
+        tools:background="@drawable/service_order_pending_background">
+
+        <TextView
+            android:id="@+id/service_order_no_title"
+            style="@style/poppins_12sp_black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/service_order_number_text"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/service_order_no_text"
+            style="@style/poppins_semibold_12sp_black"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="32dp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/service_order_no_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/service_order_no_title"
+            tools:text="1" />
+
+        <TextView
+            android:id="@+id/service_date_title"
+            style="@style/poppins_12sp_black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:text="@string/service_date_text"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/service_order_no_title" />
+
+        <TextView
+            android:id="@+id/service_date_time_text"
+            style="@style/poppins_semibold_12sp_black"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="32dp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/service_date_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/service_date_title"
+            tools:text="12.05.2021" />
+
+
+        <TextView
+            android:id="@+id/service_vehicle_title"
+            style="@style/poppins_12sp_black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:text="@string/service_vehicle_text"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/service_date_time_text" />
+
+        <TextView
+            android:id="@+id/company_vehicle_name_text"
+            style="@style/poppins_semibold_12sp_black"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="32dp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/service_vehicle_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/service_vehicle_title"
+            tools:text="MyQuad1" />
+
+        <TextView
+            android:id="@+id/company_vehicle_model_text"
+            style="@style/poppins_12sp_black"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="32dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/company_vehicle_name_text"
+            app:layout_constraintTop_toBottomOf="@+id/company_vehicle_name_text"
+            tools:text="Stels Guepard" />
+
+        <TextView
+            android:id="@+id/service_company_title"
+            style="@style/poppins_12sp_black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:text="Serwis:"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/company_vehicle_model_text" />
+
+        <TextView
+            android:id="@+id/service_company_name_text"
+            style="@style/poppins_semibold_12sp_black"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/service_company_title"
+            app:layout_constraintStart_toEndOf="@+id/service_company_title"
+            tools:text="Road Power" />
+
+        <TextView
+            android:id="@+id/service_company_address_text"
+            style="@style/poppins_12sp_black"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@+id/service_company_name_text"
+            app:layout_constraintTop_toBottomOf="@+id/service_company_name_text"
+            tools:text="ul. Zielona 12" />
+
+        <TextView
+            android:id="@+id/service_company_postal_code_text"
+            style="@style/poppins_12sp_black"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@+id/service_company_address_text"
+            app:layout_constraintTop_toBottomOf="@+id/service_company_address_text"
+            tools:text="99-456" />
+
+        <TextView
+            android:id="@+id/service_company_phone_title"
+            style="@style/poppins_12sp_black"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="tel:"
+            app:layout_constraintStart_toStartOf="@+id/service_company_postal_code_text"
+            app:layout_constraintTop_toBottomOf="@+id/service_company_postal_code_text" />
+
+        <TextView
+            android:id="@+id/service_company_phone_text"
+            style="@style/poppins_12sp_black"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/service_company_phone_title"
+            app:layout_constraintStart_toEndOf="@+id/service_company_phone_title"
+            tools:text="796845345" />
+
+        <TextView
+            android:id="@+id/service_company_city_text"
+            style="@style/poppins_12sp_black"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/service_company_postal_code_text"
+            app:layout_constraintStart_toEndOf="@+id/service_company_postal_code_text"
+            tools:text="Opole" />
+
+
+        <TextView
+            android:id="@+id/service_status_title"
+            style="@style/poppins_12sp_black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@string/service_status_text"
+            app:layout_constraintBaseline_toBaselineOf="@+id/service_status_text"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/service_status_text"
+            style="@style/poppins_semibold_12sp_black"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="32dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/service_status_title"
+            app:layout_constraintTop_toBottomOf="@+id/service_company_phone_text"
+            tools:text="Oczekiwanie na akceptację terminu" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/other_date_select_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@+id/service_status_text">
+
+            <TextView
+                android:id="@+id/textView12"
+                style="@style/poppins_12sp_black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Serwis zaproponował inne daty:"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Spinner
+                android:id="@+id/another_dates_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView12" />
+
+            <Button
+                android:id="@+id/accept_another_date_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Zatwierdź"
+                android:textSize="12sp"
+                android:theme="@style/DarkGreenRoundedButton"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/another_dates_spinner" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ImageButton
+            android:id="@+id/service_order_more_info_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:contentDescription="@string/more_info_button_description"
+            android:src="@drawable/ic_info"
+            android:tint="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

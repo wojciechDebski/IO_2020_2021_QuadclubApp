@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        app:cardBackgroundColor="@color/off_white"
+        app:cardCornerRadius="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp">
+
+            <TextView
+                android:id="@+id/orders_pending_title"
+                style="@style/poppins_semibold_14sp_black"
+                android:layout_width="218dp"
+                android:layout_height="59dp"
+                android:gravity="center"
+                android:text="@string/str_order_waiting_for_acceptance"
+                android:textAlignment="center"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/orders_pending_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="24dp"
+                android:fontFamily="@font/poppins_semibold"
+                android:textColor="#FF5722"
+                android:textSize="40sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/orders_pending_button"
+                app:layout_constraintStart_toEndOf="@+id/orders_pending_title"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="5" />
+
+            <ImageButton
+                android:id="@+id/orders_pending_button"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:paddingEnd="16dp"
+                android:paddingStart="0dp"
+                android:background="@null"
+                android:contentDescription="@string/str_company_arrow_forward_description"
+                android:src="@drawable/ic_arrow_forward"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:clickable="true"
+                android:focusable="true"
+                app:tint="@color/black" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        app:cardBackgroundColor="@color/off_white"
+        app:cardCornerRadius="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView5">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp">
+
+            <TextView
+                android:id="@+id/orders_in_progress_title"
+                style="@style/poppins_semibold_14sp_black"
+                android:layout_width="218dp"
+                android:layout_height="59dp"
+                android:gravity="center"
+                android:text="@string/str_orders_in_progress"
+                android:textAlignment="center"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/orders_in_progress_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="24dp"
+                android:fontFamily="@font/poppins_semibold"
+                android:textColor="#FF9800"
+                android:textSize="40sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/orders_in_progress_button"
+                app:layout_constraintStart_toEndOf="@+id/orders_in_progress_title"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="3" />
+
+            <ImageButton
+                android:id="@+id/orders_in_progress_button"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:paddingEnd="16dp"
+                android:paddingStart="0dp"
+                android:contentDescription="@string/str_company_arrow_forward_description"
+                android:background="@null"
+                android:src="@drawable/ic_arrow_forward"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:clickable="true"
+                android:focusable="true"
+                app:tint="@color/black" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView62"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        app:cardBackgroundColor="@color/off_white"
+        app:cardCornerRadius="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView6">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp">
+
+            <TextView
+                android:id="@+id/orders_done_title"
+                style="@style/poppins_semibold_14sp_black"
+                android:layout_width="218dp"
+                android:layout_height="59dp"
+                android:gravity="center"
+                android:text="@string/str_orders_done"
+                android:textAlignment="center"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/orders_done_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="24dp"
+                android:fontFamily="@font/poppins_semibold"
+                android:textColor="#4CAF50"
+                android:textSize="40sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/orders_done_button"
+                app:layout_constraintStart_toEndOf="@+id/orders_done_title"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="3" />
+
+            <ImageButton
+                android:id="@+id/orders_done_button"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:paddingEnd="16dp"
+                android:paddingStart="0dp"
+                android:contentDescription="@string/str_company_arrow_forward_description"
+                android:background="@null"
+                android:src="@drawable/ic_arrow_forward"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:clickable="true"
+                android:focusable="true"
+                app:tint="@color/black" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/logout_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView62">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/textView"
+                style="@style/poppins_12sp_black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/str_information_about_company"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/company_info_name"
+                style="@style/poppins_bold_20sp_black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView"
+                tools:text="Road Power" />
+
+            <TextView
+                android:id="@+id/company_info_nip_title"
+                style="@style/poppins_14sp_black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/str_caps_lock_nip"
+                app:layout_constraintBaseline_toBaselineOf="@+id/company_info_nip_text"
+                app:layout_constraintStart_toStartOf="@+id/company_info_name" />
+
+            <TextView
+                android:id="@+id/company_info_nip_text"
+                style="@style/poppins_semibold_14sp_black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintStart_toEndOf="@+id/company_info_nip_title"
+                app:layout_constraintTop_toBottomOf="@+id/company_info_name"
+                tools:text="PL0394538596" />
+
+            <TextView
+                android:id="@+id/company_info_phone_title"
+                style="@style/poppins_14sp_black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/str_phone"
+                app:layout_constraintBaseline_toBaselineOf="@+id/company_info_phone_text"
+                app:layout_constraintStart_toStartOf="@+id/company_info_nip_title" />
+
+            <TextView
+                android:id="@+id/company_info_phone_text"
+                style="@style/poppins_semibold_14sp_black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="4dp"
+                app:layout_constraintStart_toEndOf="@+id/company_info_phone_title"
+                app:layout_constraintTop_toBottomOf="@+id/company_info_nip_text"
+                tools:text="795847345" />
+
+            <TextView
+                android:id="@+id/company_info_address_title"
+                style="@style/poppins_14sp_black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/address"
+                app:layout_constraintBaseline_toBaselineOf="@+id/company_info_address_text"
+                app:layout_constraintStart_toStartOf="@+id/company_info_phone_title" />
+
+            <TextView
+                android:id="@+id/company_info_address_text"
+                style="@style/poppins_semibold_14sp_black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="4dp"
+                app:layout_constraintStart_toEndOf="@+id/company_info_address_title"
+                app:layout_constraintTop_toBottomOf="@+id/company_info_phone_text"
+                tools:text="ul. Zielona 12" />
+
+            <TextView
+                android:id="@+id/company_info_postal_code_text"
+                style="@style/poppins_semibold_14sp_black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@+id/company_info_address_text"
+                app:layout_constraintTop_toBottomOf="@+id/company_info_address_text"
+                tools:text="99-394" />
+
+            <TextView
+                android:id="@+id/company_info_city_text"
+                style="@style/poppins_semibold_14sp_black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/company_info_postal_code_text"
+                app:layout_constraintStart_toEndOf="@+id/company_info_postal_code_text"
+                tools:text="Lowicz" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/logout_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="@string/str_logout"
+        android:theme="@style/DarkGreenRoundedButton"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

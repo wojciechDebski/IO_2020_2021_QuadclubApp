@@ -1,0 +1,24 @@
+<resources>
+    <!--
+    TODO: Before you run your application, you need a Google Maps API key.
+
+    To get one, follow this link, follow the directions and press "Create" at the end:
+
+    https://console.developers.google.com/flows/enableapi?apiid=maps_android_backend&keyType=CLIENT_SIDE_ANDROID&r=76:3B:49:B8:2A:AB:38:42:C0:F9:31:58:51:E0:D3:9D:4B:27:57:1B%3Bcom.qcteam.quadclub.ui.fragments.userui
+
+    You can also add your credentials to an existing key, using these values:
+
+    Package name:
+    com.qcteam.quadclub.ui.fragments.userui
+
+    SHA-1 certificate fingerprint:
+    76:3B:49:B8:2A:AB:38:42:C0:F9:31:58:51:E0:D3:9D:4B:27:57:1B
+
+    Alternatively, follow the directions here:
+    https://developers.google.com/maps/documentation/android/start#get-key
+
+    Once you have your key (it starts with "AIza"), replace the "google_maps_key"
+    string in this file.
+    -->
+    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyD1LvNsCPF12Jy6S5VaZWMCuLE4B4vTeCU</string>
+</resources>
