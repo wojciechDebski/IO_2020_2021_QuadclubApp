@@ -351,7 +351,7 @@ class VehiclesFragment : Fragment() {
     private fun checkVehicleColor(): Int {
         val color = addNewVehicleColor.editText?.text?.trim().toString()
         return if (color.isNotEmpty()) {
-            return if (color.matches("^[a-zA-Z]*$".toRegex())) {
+            return if (color.matches("^[a-żA-Ż]*$".toRegex())) {
                 addNewVehicleColor.error = null
                 1
             } else {

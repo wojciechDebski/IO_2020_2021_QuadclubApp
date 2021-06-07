@@ -413,14 +413,21 @@ class RegisterFragment : Fragment() {
     }
 
     private fun checkCompanyPhone(): Int {
-        val phone = binding.registrationCompanyPhone.editText?.text?.trim().toString()
+        var phone = binding.registrationCompanyPhone.editText?.text?.trim().toString()
+        phone = phone.replace("\\s".toRegex(), "")
         return if (phone.isEmpty()) {
             binding.registrationCompanyPhone.error =
                 requireContext().resources.getString(R.string.str_mandatory_field)
             0
         } else {
-            binding.registrationCompanyPhone.error = null
-            1
+            if (phone.length == 9) {
+                binding.registrationCompanyPhone.error = null
+                1
+            } else {
+                binding.registrationCompanyPhone.error =
+                    requireContext().resources.getString(R.string.str_proper_data)
+                0
+            }
         }
     }
 
@@ -431,8 +438,14 @@ class RegisterFragment : Fragment() {
                 requireContext().resources.getString(R.string.str_mandatory_field)
             0
         } else {
-            binding.registrationCompanyCity.error = null
-            1
+            return if (city.matches("^[a-żA-Ż]*$".toRegex())) {
+                binding.registrationCompanyCity.error = null
+                1
+            } else {
+                binding.registrationCompanyCity.error =
+                    requireContext().resources.getString(R.string.str_proper_data)
+                0
+            }
         }
     }
 
@@ -443,8 +456,14 @@ class RegisterFragment : Fragment() {
                 requireContext().resources.getString(R.string.str_mandatory_field)
             0
         } else {
-            binding.registrationCompanyPostalCode.error = null
-            1
+            return if (postalCode.matches("^[0-9]{2}(?:-[0-9]{3})?$".toRegex())) {
+                binding.registrationCompanyPostalCode.error = null
+                1
+            } else {
+                binding.registrationCompanyPostalCode.error =
+                    requireContext().resources.getString(R.string.str_proper_data)
+                0
+            }
         }
     }
 
@@ -503,20 +522,33 @@ class RegisterFragment : Fragment() {
                 requireContext().resources.getString(R.string.str_mandatory_field)
             0
         } else {
-            binding.registrationCity.error = null
-            1
+            return if (city.matches("^[a-żA-Ż]*$".toRegex())) {
+                binding.registrationCity.error = null
+                1
+            } else {
+                binding.registrationCity.error =
+                    requireContext().resources.getString(R.string.str_proper_data)
+                0
+            }
         }
     }
 
     private fun checkPhone(): Int {
-        val phone = binding.registrationPhoneNumber.editText?.text?.trim().toString()
+        var phone = binding.registrationPhoneNumber.editText?.text?.trim().toString()
+        phone = phone.replace("\\s".toRegex(), "")
         return if (phone.isEmpty()) {
             binding.registrationPhoneNumber.error =
                 requireContext().resources.getString(R.string.str_mandatory_field)
             0
         } else {
-            binding.registrationPhoneNumber.error = null
-            1
+            if (phone.length == 9) {
+                binding.registrationPhoneNumber.error = null
+                1
+            } else {
+                binding.registrationPhoneNumber.error =
+                    requireContext().resources.getString(R.string.str_proper_data)
+                0
+            }
         }
     }
 
@@ -577,8 +609,14 @@ class RegisterFragment : Fragment() {
                 requireContext().resources.getString(R.string.str_mandatory_field)
             0
         } else {
-            binding.registrationPostalCode.error = null
-            1
+            return if (postalCode.matches("^[0-9]{2}(?:-[0-9]{3})?$".toRegex())) {
+                binding.registrationPostalCode.error = null
+                1
+            } else {
+                binding.registrationPostalCode.error =
+                    requireContext().resources.getString(R.string.str_proper_data)
+                0
+            }
         }
     }
 
@@ -619,8 +657,14 @@ class RegisterFragment : Fragment() {
                 requireContext().resources.getString(R.string.str_mandatory_field)
             0
         } else {
-            binding.registrationLastName.error = null
-            1
+            return if (lastName.matches("^[a-żA-Ż]{4,}(?: [a-żA-Ż]+){0,2}\$".toRegex())) {
+                binding.registrationLastName.error = null
+                1
+            } else {
+                binding.registrationLastName.error =
+                    requireContext().resources.getString(R.string.str_proper_data)
+                0
+            }
         }
     }
 
@@ -631,8 +675,14 @@ class RegisterFragment : Fragment() {
                 requireContext().resources.getString(R.string.str_mandatory_field)
             0
         } else {
-            binding.registrationFirstName.error = null
-            1
+            return if (firstName.matches("^[a-żA-Ż]{4,}(?: [a-żA-Ż]+){0,2}\$".toRegex())) {
+                binding.registrationFirstName.error = null
+                1
+            } else {
+                binding.registrationFirstName.error =
+                    requireContext().resources.getString(R.string.str_proper_data)
+                0
+            }
         }
     }
 

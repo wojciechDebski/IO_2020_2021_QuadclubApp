@@ -199,4 +199,5 @@
     <string name="str_wrong_address_email">Podaj poprawny adres email.</string>
     <string name="str_passwords_must_be_identical">hasła muszą być identyczne</string>
     <string name="str_password_must_have_eight_digits">hasło musi mieć minimum 8 znaków</string>
+    <string name="str_proper_data">Wprowadź poprawne dane</string>
 </resources>

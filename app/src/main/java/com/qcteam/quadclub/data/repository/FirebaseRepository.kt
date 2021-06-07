@@ -30,6 +30,7 @@ class FirebaseRepository : ViewModel() {
     private val auth: FirebaseAuth = FirebaseAuth.getInstance()
     private val urls = "https://quadclub-mobileapp-default-rtdb.europe-west1.firebasedatabase.app/"
     private val dbRTF = FirebaseDatabase.getInstance(urls)
+    private val dbFF = FirebaseFirestore.getInstance()
 
     //initialization live data variables --------------------------
 

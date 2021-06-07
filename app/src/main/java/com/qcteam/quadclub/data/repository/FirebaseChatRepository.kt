@@ -162,34 +162,43 @@ class FirebaseChatRepository : ViewModel() {
                 return@addOnFailureListener
             }
 
-            partnerFirestoreRef.set(
-                ConversationFF(
-                    "${auth.currentUser!!.uid}_${partner.userUid}",
-                    auth.currentUser!!.uid,
-                    "${user.firstName} ${user.lastName}",
-                    user.userProfilePhotoUrl,
-                    null
-                )
-            ).addOnFailureListener { error ->
+            partnerFirestoreRef.get().addOnSuccessListener { documentRef ->
+                if(!documentRef.exists()){
+                    partnerFirestoreRef.set(
+                        ConversationFF(
+                            "${auth.currentUser!!.uid}_${partner.userUid}",
+                            auth.currentUser!!.uid,
+                            "${user.firstName} ${user.lastName}",
+                            user.userProfilePhotoUrl,
+                            null
+                        )
+                    ).addOnFailureListener { error ->
+                        errorMessage.postValue(error)
+                        return@addOnFailureListener
+                    }
+
+                    dbRTF.reference.child("conversations/${auth.currentUser!!.uid}_${partner.userUid}")
+                        .push()
+                        .setValue(
+                            SingleMessage(
+                                "start_conversation",
+                                "",
+                                "1053",
+                                ""
+                            )
+                        ).addOnSuccessListener {
+                            newConversationStatus.postValue("${auth.currentUser!!.uid}_${partner.userUid}")
+                        }.addOnFailureListener { error ->
+                            errorMessage.postValue(error)
+                            return@addOnFailureListener
+                        }
+                } else {
+                    newConversationStatus.postValue("${auth.currentUser!!.uid}_${partner.userUid}")
+                }
+            }.addOnFailureListener { error ->
                 errorMessage.postValue(error)
                 return@addOnFailureListener
             }
-
-            dbRTF.reference.child("conversations/${auth.currentUser!!.uid}_${partner.userUid}")
-                .push()
-                .setValue(
-                    SingleMessage(
-                        "start_conversation",
-                        "",
-                        "1053",
-                        ""
-                    )
-                ).addOnSuccessListener {
-                    newConversationStatus.postValue("${auth.currentUser!!.uid}_${partner.userUid}")
-                }.addOnFailureListener { error ->
-                    errorMessage.postValue(error)
-                    return@addOnFailureListener
-                }
         } else {
             errorMessage.postValue(Exception("Wystąpił nieznany błąd."))
         }
