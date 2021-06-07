@@ -898,9 +898,12 @@ class FirebaseRepository : ViewModel() {
                                         update["userProfilePhotoPath"] =
                                             "Images/${auth.currentUser!!.uid}/profilePhoto/$filename"
 
+
+
                                         FirebaseFirestore.getInstance().collection("users")
                                             .document(auth.currentUser!!.uid).update(update)
                                             .addOnSuccessListener {
+                                                updatePhotoLinks(uri.toString())
                                                 taskStatusListener.postValue(true)
                                             }
                                             .addOnFailureListener { error ->
@@ -935,9 +938,11 @@ class FirebaseRepository : ViewModel() {
                                 update["userProfilePhotoPath"] =
                                     "Images/${auth.currentUser!!.uid}/profilePhoto/$filename"
 
+
                                 FirebaseFirestore.getInstance().collection("users")
                                     .document(auth.currentUser!!.uid).update(update)
                                     .addOnSuccessListener {
+                                        updatePhotoLinks(uri.toString())
                                         taskStatusListener.postValue(true)
                                     }
                                     .addOnFailureListener { error ->
@@ -965,6 +970,37 @@ class FirebaseRepository : ViewModel() {
         }
         else {
             errorMessage.postValue(Exception("Wsystąpił nieznany błąd."))
+        }
+    }
+
+    private fun updatePhotoLinks(photoUrl: String) {
+        if(auth.currentUser != null){
+            val postRef = dbFF.collection("posts").whereEqualTo("authorUid", auth.currentUser!!.uid)
+
+            postRef.get().addOnSuccessListener { docs ->
+                docs.forEach { _doc ->
+                    val doc = dbFF.collection("posts").document(_doc.id)
+                    doc.update(mapOf(
+                        "authorPhotoUrl" to photoUrl
+                    ))
+                }
+            }
+
+            val users = dbFF.collection("users")
+
+            users.get().addOnSuccessListener { docs ->
+                docs.forEach { _doc ->
+                    val doc = dbFF.collection("users").document(_doc.id).collection("conversations").whereEqualTo("senderUid", auth.currentUser!!.uid)
+                    doc.get().addOnSuccessListener { docs2 ->
+                        docs2.forEach { _doc2 ->
+                            val conv = dbFF.collection("users").document(_doc.id).collection("conversations").document(_doc2.id)
+                            conv.update(mapOf(
+                                "senderPhotoUrl" to photoUrl
+                            ))
+                        }
+                    }
+                }
+            }
         }
     }
 
